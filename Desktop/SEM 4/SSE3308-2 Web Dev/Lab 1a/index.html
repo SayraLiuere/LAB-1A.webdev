@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .pictures-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #add8e6; /* Light blue color for the pictures table */
+        }
+        .pictures-table td {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: #add8e6; /* Light blue color for cells */
+        }
+        .pictures-table img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .puzzle-table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 800px;
+            background-color: #add8e6;
+        }
+        .puzzle-table td {
+            width: 20%;
+            height: 60px;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 24px;
+            background-color: #add8e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>GUESSING GAME</h1>
+    <table class="pictures-table" align="center" border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <td width="1000" height="10">
+                <a href="image/gimocurl.jpeg">
+                    <img align="left" src="image/gimocurl.jpeg" width="100" height="100">
+                </a>
+            </td>
+            <td width="1000" height="10">
+                <a href="image/gimoosquint.jpeg">
+                    <img align="right" src="image/gimoosquint.jpeg" width="100" height="100">
+                </a>
+            </td>
+        </tr>
+    </table>
+    <table class="puzzle-table">
+        <tr>
+            <td>S</td>
+            <td>U</td>
+            <td colspan="2">F</td>
+            <td>R</td>
+        </tr>
+        <tr>
+            <td>S</td>
+            <td rowspan="4">U</td>
+            <td>F</td>
+            <td>R</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td rowspan="2">S</td>
+            <td rowspan="2">F</td>
+            <td colspan="2"><ul>
+                <li>R</li>
+                <li>R</li>
+              </ul>
+            </td>
+        </tr>
+        <tr>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>S</td>
+            <td>F</td>
+            <td>R</td>
+            <td>I</td>
+        </tr>
+    </table>
+</body>
+</html> 
+
+<!-- --5x5 table: -->
+<!-- row 1; S, U, F (takes 2 block merged),R -->
+<!-- row 2; S, U (merge with bottom row until row 5), F, R, I -->
+<!-- row 3; S (merge with bottom row one), f (merger with bottomm row until row 4), -->
+<!-- row 4;  -->
+<!-- row 5; S -->
